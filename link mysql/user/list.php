@@ -26,13 +26,14 @@
 			$db=new db("127.0.0.1","root","","user");
 			$date = $db->query("select * from test")->fetchAll();
 			print_r($date);
-			
-			$link=mysqli_connect("127.0.0.1","root","","user") or die("無法連接資料庫:".mysql_error());
-			$query="select * from test";
-			$result=mysqli_query($link,$query)or die("無法送出".mysql_error());
+			//以下註解內容需要使用時，必須把foreach那行註腳掉
+			//$link=mysqli_connect("127.0.0.1","root","","user") or die("無法連接資料庫:".mysql_error());
+			//$query="select * from test";
+			//$result=mysqli_query($link,$query)or die("無法送出".mysql_error());
 		?>
 		<?php
-			while($row=mysqli_fetch_array($result)){
+			//while($row=mysqli_fetch_array($result)){
+			foreach($date as $key => $row){
 		?>
 			<tr>
 				<td><?=$row["ID"];?></td>
