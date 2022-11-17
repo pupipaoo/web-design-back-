@@ -22,6 +22,11 @@
 	</thead>
 	<tbody>
 		<?php
+			include("db.class.php");
+			$db=new db("127.0.0.1","root","","user");
+			$date = $db->query("select * from test")->fetchAll();
+			print_r($date);
+			
 			$link=mysqli_connect("127.0.0.1","root","","user") or die("無法連接資料庫:".mysql_error());
 			$query="select * from test";
 			$result=mysqli_query($link,$query)or die("無法送出".mysql_error());
@@ -43,4 +48,7 @@
 			</tr>
 		<?php		
 			}
+			$db->query("update test set name='阿格麗' where ID='13'");
+			$db->query("insert into test(name,mail) values(?,?)",'夏洛克','aa@gmail.com');
+			$db->query("delete from test where id='21'");
 		?>
