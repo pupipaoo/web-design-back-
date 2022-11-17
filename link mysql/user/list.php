@@ -25,7 +25,7 @@
 			include("db.class.php");
 			$db=new db("127.0.0.1","root","","user");
 			$date = $db->query("select * from test")->fetchAll();
-			print_r($date);
+			//print_r($date);
 			//以下註解內容需要使用時，必須把foreach那行註腳掉
 			//$link=mysqli_connect("127.0.0.1","root","","user") or die("無法連接資料庫:".mysql_error());
 			//$query="select * from test";
