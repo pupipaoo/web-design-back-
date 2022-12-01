@@ -26,7 +26,7 @@
 			$db=new db("127.0.0.1","root","","user");
 			$date = $db->query("select * from test")->fetchAll();
 			//print_r($date); 這行是拿來偵錯的
-			//以下註解內容需要使用時，必須把foreach那行註腳掉，並且把第25~27行註解掉，因為第25到27是更優化的30~32行
+			//30~32行的註解內容需要使用時，必須把foreach那行註腳掉，並且把第25~27行、52~54行註解掉，因為第25到27是更優化的30~32行，52~54行是用db.class.php進行資料修改
 			//$link=mysqli_connect("127.0.0.1","root","","user") or die("無法連接資料庫:".mysql_error());
 			//$query="select * from test";
 			//$result=mysqli_query($link,$query)or die("無法送出".mysql_error());
@@ -48,7 +48,7 @@
 				</td>
 			</tr>
 		<?php		
-			}	//用程式碼更新、新增、刪除資料庫內容
+			}	//透過class方式，用程式碼更新、新增、刪除資料庫內容
 			$db->query("update test set name='阿格麗' where ID='13'");
 			$db->query("insert into test(name,mail) values(?,?)",'夏洛克','aa@gmail.com');
 			$db->query("delete from test where id='21'");
