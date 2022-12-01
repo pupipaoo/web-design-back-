@@ -48,7 +48,7 @@
 				</td>
 			</tr>
 		<?php		
-			}
+			}	//用程式碼更新、新增、刪除資料庫內容
 			$db->query("update test set name='阿格麗' where ID='13'");
 			$db->query("insert into test(name,mail) values(?,?)",'夏洛克','aa@gmail.com');
 			$db->query("delete from test where id='21'");
