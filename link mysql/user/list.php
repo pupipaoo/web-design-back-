@@ -25,7 +25,7 @@
 			include("db.class.php"); 	//include是指載入某一個檔案，也就是當讀到這一行的時候，會載入特定檔案
 			$db=new db("127.0.0.1","root","","user");
 			$date = $db->query("select * from test")->fetchAll();
-			//print_r($date);
+			//print_r($date); 這行是拿來偵錯的
 			//以下註解內容需要使用時，必須把foreach那行註腳掉，並且把第25~27行註解掉，因為第25到27是更優化的30~32行
 			//$link=mysqli_connect("127.0.0.1","root","","user") or die("無法連接資料庫:".mysql_error());
 			//$query="select * from test";
