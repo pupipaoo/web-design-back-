@@ -1,8 +1,8 @@
 <html>
 <meta charset="utf-8">
 <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-<link rel="stylesheet" type="text/css" href="datatables.min.css"/>
-<script type="text/javascript" src="datatables.min.js"></script>
+<link rel="stylesheet" type="text/css" href="datatables.min.css"/>   		//rel意思是要連接的檔案功能	
+<script type="text/javascript" src="datatables.min.js"></script>		//載入javascript程式語音，其實是可以省略，現在打script會預設是javascript;datatables.min.js則是透過javascript的韓式庫而可以直譯，讓資料庫在瀏覽器執行
 <script>
 	$(document).ready(function () {
     $('#example').DataTable();
